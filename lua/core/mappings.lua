@@ -17,10 +17,11 @@ vim.g.mapleader = " "
 -- Better to save file & exit file --
 keymap("n", "Q", ":q<CR>", opts)
 keymap("n", "S", ":w<CR>", opts)
+-- Close buffer --
+keymap("n", "X", ":bdelete<CR>", opts)
 
 -- 'jk' key to exit insert mode --
 keymap("i", "jk", "<Esc>", opts)
-
 
 -- Better window navigation --
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -38,14 +39,13 @@ keymap("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
 
 -- Stay in indent mode --
 keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts) 
+keymap("v", ">", ">gv", opts)
 
 -- Move text up and down --
 keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 keymap("v", "J", ":move '>+1<CR>gv-gv", opts)
 keymap("v", "K", ":move '<-2<CR>gv-gv", opts)
-
 
 -- Better split screen --
 keymap("", "s", "<Nop>", opts)

@@ -4,7 +4,7 @@ vim.cmd[[autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif]]
 
-vim.cmd [[set iskeyword+=-]]
+vim.cmd[[set iskeyword+=-]]
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 

@@ -1,2 +1,2 @@
-require('impatient')
-require'impatient'.enable_profile()
+require("impatient")
+require("impatient").enable_profile()

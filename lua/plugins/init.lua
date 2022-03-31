@@ -111,11 +111,11 @@ return packer.startup(function(use)
 	-- For example, Vue files can have many different sections, each of which can have a different style for comments --
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
-	--[  A tree like view for symbols in Neovim using the Language Server Protocol. ]--
-	use({
-		"simrat39/symbols-outline.nvim",
-		cmd = "SymbolsOutline",
-	})
+	-- --[  A tree like view for symbols in Neovim using the Language Server Protocol. ]--
+	-- use({
+	-- 	"simrat39/symbols-outline.nvim",
+	-- 	cmd = "SymbolsOutline",
+	-- })
 
 	--[ File explorer ]--
 	use({
@@ -205,8 +205,8 @@ return packer.startup(function(use)
 	use({
 		"akinsho/toggleterm.nvim",
 	})
-	--displays a popup with possible key bindings of the command you started typing--
-	use("folke/which-key.nvim")
+	-- --displays a popup with possible key bindings of the command you started typing--
+	-- use("folke/which-key.nvim")
 
 	------------------
 	-- Add Plug End --

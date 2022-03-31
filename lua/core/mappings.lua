@@ -17,8 +17,6 @@ vim.g.mapleader = " "
 -- Better to save file & exit file --
 keymap("n", "Q", ":q<CR>", opts)
 keymap("n", "S", ":w<CR>", opts)
--- Close buffer --
-keymap("n", "X", ":bdelete<CR>", opts)
 
 -- 'jk' key to exit insert mode --
 keymap("i", "jk", "<Esc>", opts)
@@ -78,7 +76,7 @@ keymap("n", "<Leader>f", ":Telescope<CR>", opts)
 -- open or close trouble.nvim --
 keymap("n", "tr", ":TroubleToggle<CR>", opts)
 
-keymap("n", "tg", ":SymbolsOutline<CR>", opts)
+-- keymap("n", "tg", ":SymbolsOutline<CR>", opts)
 
 -- msic --
 keymap("n", "K", "5k", opts)

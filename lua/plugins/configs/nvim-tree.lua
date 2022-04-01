@@ -155,3 +155,5 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 		},
 	},
 })
+
+vim.cmd("au ColorScheme * hi NvimTreeNormal ctermbg=none guibg=#3B4252")

@@ -21,7 +21,7 @@ local options = {
 	wrap = false,
 	scrolloff = 10,
 	fileencodings = "utf-8,gbk",
-	updatetime = 10, -- faster completion (4000ms default)
+	updatetime = 50, -- faster completion (4000ms default)
 }
 
 for k, v in pairs(options) do

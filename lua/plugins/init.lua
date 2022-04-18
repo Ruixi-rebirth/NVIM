@@ -87,7 +87,6 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
-	use("hrsh7th/cmp-cmdline")
 	use("saadparwaiz1/cmp_luasnip")
 	use("L3MON4D3/LuaSnip")
 	use("rafamadriz/friendly-snippets")
@@ -207,7 +206,6 @@ return packer.startup(function(use)
 	})
 	-- --displays a popup with possible key bindings of the command you started typing--
 	-- use("folke/which-key.nvim")
-
 	------------------
 	-- Add Plug End --
 	------------------

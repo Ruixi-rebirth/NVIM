@@ -10,6 +10,9 @@ require("plugins.configs.comment")
 require("plugins.configs.gitsigns")
 require("plugins.configs.nvim-tree")
 require("plugins.configs.toggleterm")
+require("plugins.configs.aerial")
+-- require("plugins.configs.nvim-lightbulb")
+-- require("plugins.configs.lspsaga")
 local fn = vim.fn
 -- automatically install packer
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
@@ -99,6 +102,12 @@ return packer.startup(function(use)
 	use("folke/lsp-colors.nvim")
 	use("nvim-lua/lsp-status.nvim") --This is a Neovim plugin/library for generating statusline components from the built-in LSP client
 	use("jose-elias-alvarez/null-ls.nvim")
+	use("stevearc/aerial.nvim") --quick view code
+	-- use({
+	-- 	"kosayoda/nvim-lightbulb",
+	-- 	requires = "antoinemadec/FixCursorHold.nvim",
+	-- })
+	-- use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	--[ A super powerful autopair plugin for Neovim that supports multiple characters. ]--
 	use("windwp/nvim-autopairs")
@@ -122,7 +131,6 @@ return packer.startup(function(use)
 		requires = {
 			"kyazdani42/nvim-web-devicons", -- optional, for file icon
 		},
-		cmd = "NvimTreeToggle",
 	})
 
 	--[ An implementation of the Popup API from vim in Neovim ]--

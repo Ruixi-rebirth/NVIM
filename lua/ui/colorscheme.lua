@@ -1,4 +1,4 @@
-local colorscheme = "nord" --[nord | catppuccin]
+local colorscheme = "catppuccin" --[nord | catppuccin]
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then

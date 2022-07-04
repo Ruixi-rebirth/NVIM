@@ -11,3 +11,4 @@ vim.cmd("set whichwrap+=<,>,[,],h,l")
 -- about fold 
 vim.cmd("set foldmethod=expr")
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
+

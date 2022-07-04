@@ -77,6 +77,8 @@ keymap("n", "<Leader>e", ":Telescope<CR>", opts)
 keymap("n", "tr", ":TroubleToggle<CR>", opts)
 
 -- keymap("n", "tg", ":SymbolsOutline<CR>", opts)
+--setup mapping to call :LazyGit
+keymap("n","<Leader>g",":LazyGit<CR>",opts)
 
 -- msic --
 keymap("n", "K", "5k", opts)

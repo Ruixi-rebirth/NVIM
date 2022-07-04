@@ -11,7 +11,10 @@ require("plugins.configs.gitsigns")
 require("plugins.configs.nvim-tree")
 require("plugins.configs.toggleterm")
 require("plugins.configs.aerial")
--- require("plugins.configs.nvim-lightbulb")
+require("plugins.configs.orgmode")
+require("plugins.configs.neoscroll")
+require("plugins.configs.diffview")
+--require("plugins.configs.nvim-lightbulb")
 -- require("plugins.configs.lspsaga")
 local fn = vim.fn
 -- automatically install packer
@@ -70,6 +73,10 @@ return packer.startup(function(use)
 	})
 	--[ colorscheme ]--
 	use("shaunsingh/nord.nvim")
+  use({
+	"catppuccin/nvim",
+	as = "catppuccin"
+})
 	--[ statusline ]--
 	use({
 		"nvim-lualine/lualine.nvim",
@@ -103,12 +110,12 @@ return packer.startup(function(use)
 	use("nvim-lua/lsp-status.nvim") --This is a Neovim plugin/library for generating statusline components from the built-in LSP client
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("stevearc/aerial.nvim") --quick view code
+  use("RRethy/vim-illuminate")
 	-- use({
 	-- 	"kosayoda/nvim-lightbulb",
 	-- 	requires = "antoinemadec/FixCursorHold.nvim",
 	-- })
-	-- use({ "glepnir/lspsaga.nvim", branch = "main" })
-
+	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	--[ A super powerful autopair plugin for Neovim that supports multiple characters. ]--
 	use("windwp/nvim-autopairs")
 
@@ -152,14 +159,6 @@ return packer.startup(function(use)
 		"p00f/nvim-ts-rainbow",
 	})
 
-	--[ highly extendable fuzzy finder over lists]--
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
-	use({
-		"nvim-telescope/telescope-media-files.nvim",
-	})
 
 	--[ Useful lua functions used ny lots of plugins ]--
 	use({
@@ -203,15 +202,34 @@ return packer.startup(function(use)
 			require("trouble").setup({})
 		end,
 	})
+
 	-- Super fast git decorations implemented purely in lua/teal --
 	use({
 		"lewis6991/gitsigns.nvim",
+	})
+  -- Git diff view
+-- Packer
+  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }  
+	--[ highly extendable fuzzy finder over lists]--
+  -- Plugin for calling lazygit from within neovim
+  use({
+      "nvim-telescope/telescope.nvim",
+  })
+  use("kdheepak/lazygit.nvim")
+	use({
+		"nvim-telescope/telescope-media-files.nvim",
 	})
 
 	--A neovim plugin to persist and toggle multiple terminals during an editing session--
 	use({
 		"akinsho/toggleterm.nvim",
 	})
+
+  -- Take Note
+  use ('nvim-orgmode/orgmode')
+
+  -- Smooth scroll
+  use 'karb94/neoscroll.nvim'
 	-- --displays a popup with possible key bindings of the command you started typing--
 	-- use("folke/which-key.nvim")
 	------------------

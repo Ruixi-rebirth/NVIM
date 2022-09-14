@@ -63,6 +63,10 @@ return packer.startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 	-- startup time show --
+	--
+	use({
+		"kyazdani42/nvim-web-devicons",
+	})
 	use({
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",

@@ -52,6 +52,14 @@ keymap("n", "sh", ":set nosplitright<CR>:vsplit<CR>", opts)
 keymap("n", "sk", ":set nosplitbelow<CR>:split<CR>", opts)
 keymap("n", "sj", ":set splitbelow<CR>:split<CR>", opts)
 
+--  Average adjustment window --
+keymap("n", "<C-=>", "<C-w>=", opts)
+-- Swap and move windows --
+keymap("n", "<Space>h", "<C-w>H", opts)
+keymap("n", "<Space>j", "<C-w>J", opts)
+keymap("n", "<Space>k", "<C-w>K", opts)
+keymap("n", "<Space>l", "<C-w>L", opts)
+
 -- Adjust the direction of the split screen --
 keymap("n", ",", "<C-w>t<C-w>K", opts)
 keymap("n", ".", "<C-w>t<C-w>H", opts)
@@ -78,7 +86,7 @@ keymap("n", "tr", ":TroubleToggle<CR>", opts)
 
 -- keymap("n", "tg", ":SymbolsOutline<CR>", opts)
 --setup mapping to call :LazyGit
-keymap("n","<Leader>g",":LazyGit<CR>",opts)
+keymap("n", "<Leader>g", ":LazyGit<CR>", opts)
 
 -- msic --
 keymap("n", "K", "5k", opts)

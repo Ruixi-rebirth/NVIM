@@ -19,7 +19,7 @@ local options = {
 	number = true,
 	numberwidth = 4,
 	relativenumber = true,
-	wrap = false,
+	--[[ wrap = false, ]]
 	scrolloff = 8,
 	fileencodings = "utf-8,gbk",
 	updatetime = 50, -- faster completion (4000ms default)
@@ -28,4 +28,3 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
-

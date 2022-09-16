@@ -230,6 +230,7 @@ return packer.startup(function(use)
 	use({
 		"akinsho/toggleterm.nvim",
 	})
+	--[[ use("voldikss/vim-floaterm") ]]
 
 	-- -- Take Note
 	--[[ use("nvim-orgmode/orgmode") ]]

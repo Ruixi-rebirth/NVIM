@@ -170,11 +170,9 @@ return require("packer").startup(function(use)
 	--[ highly extendable fuzzy finder over lists]--
 	use({
 		"nvim-telescope/telescope.nvim",
-		cmd = "Telescope",
 	})
 	use({
 		"nvim-telescope/telescope-media-files.nvim",
-		require = "nvim-telescope/telescope.nvim",
 	})
 	-- Plugin for calling lazygit from within neovim
 	use({ "kdheepak/lazygit.nvim", cmd = "LazyGit" })

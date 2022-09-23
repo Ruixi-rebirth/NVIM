@@ -34,9 +34,20 @@ require("nvim-tree").setup({ -- BEGIN_DEFAULT_OPTS
 	sort_by = "name",
 	update_cwd = false,
 	view = {
-		width = 25,
-		height = 30,
-		side = "left",
+		--[[ width = 25, ]]
+		--[[ height = 30, ]]
+		float = {
+			enable = true,
+			open_win_config = {
+				relative = "editor",
+				--[[ border = "rounded", ]]
+				width = 25,
+				height = 20,
+				row = 3,
+				col = 120,
+			},
+		},
+		--[[ side = "left", ]]
 		preserve_window_proportions = false,
 		number = false,
 		relativenumber = false,

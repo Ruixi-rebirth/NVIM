@@ -88,6 +88,9 @@ keymap("n", "tr", ":TroubleToggle<CR>", opts)
 --setup mapping to call :LazyGit
 keymap("n", "<Leader>g", ":LazyGit<CR>", opts)
 
+-- go run main.go quickly
+keymap("n", "gr", ":TermExec cmd='go run main.go'<CR>", opts)
+
 -- msic --
 keymap("n", "K", "5k", opts)
 keymap("n", "J", "5j", opts)

@@ -1,6 +1,6 @@
 local options = {
 	clipboard = "unnamedplus",
-	--mouse = "a",
+	mouse = "a",
 	undofile = true,
 	ignorecase = true,
 	smartcase = true,
@@ -15,7 +15,7 @@ local options = {
 	shiftwidth = 2, --insert 2 spaces for each indentation
 	tabstop = 2, --insert 2 spaces for a tab
 	cursorline = true, --Highlight the line where the cursor is located
-	cursorcolumn = true,
+	cursorcolumn = false,
 	number = true,
 	numberwidth = 4,
 	relativenumber = true,

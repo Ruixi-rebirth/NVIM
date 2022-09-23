@@ -62,7 +62,7 @@ return require("packer").startup(function(use)
 		"lewis6991/impatient.nvim",
 	})
 	--[ colorscheme ]--
-	use("shaunsingh/nord.nvim")
+	--use("shaunsingh/nord.nvim")
 	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
@@ -93,7 +93,6 @@ return require("packer").startup(function(use)
 	use("folke/lsp-colors.nvim")
 	use("nvim-lua/lsp-status.nvim") --This is a Neovim plugin/library for generating statusline components from the built-in LSP client
 	use({ "jose-elias-alvarez/null-ls.nvim" })
-	use("RRethy/vim-illuminate")
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	--[ A super powerful autopair plugin for Neovim that supports multiple characters. ]--
 	use("windwp/nvim-autopairs")

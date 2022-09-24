@@ -69,10 +69,10 @@ return require("packer").startup(function(use)
 	--[ A completion plugin for Neovim ]--
 	use({ "hrsh7th/nvim-cmp", config = "require('plugins.configs.cmp')" })
 	use({ "rafamadriz/friendly-snippets", event = "InsertEnter" })
-	use({ "L3MON4D3/LuaSnip", })
+	use({ "L3MON4D3/LuaSnip" })
 	use({ "saadparwaiz1/cmp_luasnip", after = "LuaSnip" })
-	use({ "hrsh7th/cmp-buffer", after = "cmp_luasnip",event = "InsertEnter" })
-	use({ "hrsh7th/cmp-path", after = "cmp-buffer",event = "InsertEnter" })
+	use({ "hrsh7th/cmp-buffer", after = "cmp_luasnip", event = "InsertEnter" })
+	use({ "hrsh7th/cmp-path", after = "cmp-buffer", event = "InsertEnter" })
 	use({ "hrsh7th/cmp-cmdline", after = "nvim-cmp" })
 	--[ about lsp ]--
 	use({ "hrsh7th/cmp-nvim-lsp" })
@@ -98,6 +98,7 @@ return require("packer").startup(function(use)
 	use({
 		"numToStr/Comment.nvim",
 		config = "require('plugins.configs.comment')",
+		event = "BufReadPost",
 	})
 	-- For example, Vue files can have many different sections, each of which can have a different style for comments --
 	use("JoosepAlviste/nvim-ts-context-commentstring")

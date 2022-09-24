@@ -7,7 +7,7 @@ require("nvim-lsp-installer").setup({
 -- after the language server attaches to the current buffer
 
 local lsp_formatting = function(bufnr)
-	vim.lsp.buf.formatting({
+	vim.lsp.buf.format({
 		filter = function(client)
 			-- apply whatever logic you want (in this example, we'll only use null-ls)
 			return client.name == "null-ls"
@@ -57,8 +57,6 @@ capabilities.textDocument.foldingRange = {
 	dynamicRegistration = false,
 	lineFoldingOnly = true,
 }
--- capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
--- capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local nvim_lsp = require("lspconfig")
 

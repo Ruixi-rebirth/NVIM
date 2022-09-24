@@ -66,21 +66,19 @@ return require("packer").startup(function(use)
 		config = "require('plugins.configs.bufferline')",
 		requires = "kyazdani42/nvim-web-devicons",
 	})
-	--[ A completion plugin for Neovim ]--
-	use({ "hrsh7th/nvim-cmp", config = "require('plugins.configs.cmp')" })
+	--[ cmp && lsp ]--
 	use({ "rafamadriz/friendly-snippets", event = "InsertEnter" })
-	use({ "L3MON4D3/LuaSnip" })
+	use({ "hrsh7th/nvim-cmp", config = "require('plugins.configs.cmp')", after = "friendly-snippets" })
+	use({ "L3MON4D3/LuaSnip", after = "nvim-cmp" })
 	use({ "saadparwaiz1/cmp_luasnip", after = "LuaSnip" })
-	use({ "hrsh7th/cmp-buffer", after = "cmp_luasnip", event = "InsertEnter" })
-	use({ "hrsh7th/cmp-path", after = "cmp-buffer", event = "InsertEnter" })
-	use({ "hrsh7th/cmp-cmdline", after = "nvim-cmp" })
-	--[ about lsp ]--
-	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-nvim-lsp", after = "cmp_luasnip" })
 	use({ "hrsh7th/cmp-nvim-lua", after = "cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-buffer", after = "cmp-nvim-lua" })
+	use({ "hrsh7th/cmp-path", after = "cmp-buffer" })
+	use({ "hrsh7th/cmp-cmdline", after = "cmp-path" })
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/nvim-lsp-installer" })
-	use("folke/lsp-colors.nvim")
-	use("nvim-lua/lsp-status.nvim") --This is a Neovim plugin/library for generating statusline components from the built-in LSP client
+	--[ format code ]--
 	use({ "jose-elias-alvarez/null-ls.nvim" })
 	use({ "glepnir/lspsaga.nvim", config = "require('plugins.configs.lspsaga')", branch = "main" })
 	--[ A super powerful autopair plugin for Neovim that supports multiple characters. ]--
@@ -125,7 +123,7 @@ return require("packer").startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		config = "require('plugins.configs.treesitter')",
 		run = ":TSUpdate",
-		event = "BufWinEnter",
+		event = "BufRead",
 	})
 	use({
 		"p00f/nvim-ts-rainbow",
@@ -137,10 +135,12 @@ return require("packer").startup(function(use)
 	--[ Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.It's easiest to explain with examples. Press cs"' inside ]--
 	use({
 		"tpope/vim-surround",
+    event = "BufReadPost"
 	})
 	--[ History modification record ]--
 	use({
 		"mbbill/undotree",
+		event = "InsertEnter",
 	})
 	--[ Markdown preview ]--
 	use({
@@ -166,12 +166,21 @@ return require("packer").startup(function(use)
 	use({
 		"lewis6991/gitsigns.nvim",
 		config = "require('plugins.configs.gitsigns')",
+    event="BufRead"
 	})
 	-- Git diff view
 	use({
 		"sindrets/diffview.nvim",
 		config = "require('plugins.configs.diffview')",
 		requires = "nvim-lua/plenary.nvim",
+		cmd = {
+			"DiffviewOpen",
+			"DiffviewClose",
+			"DiffviewRefresh",
+			"DiffviewFocusFiles",
+			"DiffviewToggleFiles",
+			"DiffviewFileHistory",
+		},
 	})
 	--[ highly extendable fuzzy finder over lists]--
 	use({
@@ -188,7 +197,12 @@ return require("packer").startup(function(use)
 		cmd = "ToggleTerm",
 		config = "require('plugins.configs.toggleterm')",
 	})
-	use("tpope/vim-dadbod")
+	-- use({
+	-- 	"kristijanhusak/vim-dadbod-ui",
+	-- 	config = "require('plugins.configs.vim-dadbod')",
+	-- 	cmd = { "DBUI" },
+	-- 	required = { "tpope/vim-dadbod" },
+	-- })
 	------------------
 	-- Add Plug End --
 	------------------

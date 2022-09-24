@@ -1,4 +1,5 @@
 require("nvim-lsp-installer").setup({
+-- Automatically download the LSP server set in advance
 	automatic_installation = true,
 })
 

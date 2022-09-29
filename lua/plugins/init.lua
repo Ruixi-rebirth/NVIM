@@ -48,6 +48,8 @@ return require("packer").startup(function(use)
 		"catppuccin/nvim",
 		as = "catppuccin",
 	})
+	--[ icon ]--
+	use({ "kyazdani42/nvim-web-devicons" })
 	-- mprove startup time for Neovim --
 	use({
 		"lewis6991/impatient.nvim",
@@ -131,7 +133,7 @@ return require("packer").startup(function(use)
 	--[ Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more. The plugin provides mappings to easily delete, change and add such surroundings in pairs.It's easiest to explain with examples. Press cs"' inside ]--
 	use({
 		"tpope/vim-surround",
-    event = "BufReadPost"
+		event = "BufReadPost",
 	})
 	--[ History modification record ]--
 	use({
@@ -162,7 +164,7 @@ return require("packer").startup(function(use)
 	use({
 		"lewis6991/gitsigns.nvim",
 		config = "require('plugins.configs.gitsigns')",
-    event="BufRead"
+		event = "BufRead",
 	})
 	-- Git diff view
 	use({

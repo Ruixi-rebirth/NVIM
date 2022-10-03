@@ -192,7 +192,7 @@ return require("packer").startup(function(use)
 	--A neovim plugin to persist and toggle multiple terminals during an editing session--
 	use({
 		"akinsho/toggleterm.nvim",
-		cmd = "ToggleTerm",
+		-- cmd = "ToggleTerm",
 		config = "require('plugins.configs.toggleterm')",
 	})
 	-- use({

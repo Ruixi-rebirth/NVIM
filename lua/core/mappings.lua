@@ -88,12 +88,12 @@ keymap("n", "tr", ":TroubleToggle<CR>", opts)
 --setup mapping to call :LazyGit
 keymap("n", "<Leader>g", ":LazyGit<CR>", opts)
 
--- go run main.go quickly
-keymap("n", "gr", ":TermExec cmd='go run main.go'<CR>", opts)
-
+--debug
+keymap("n", "<F6>", ":lua require('dapui').toggle()<CR>", opts)
+keymap("n", "<C-b>", ":lua require'dap'.toggle_breakpoint()<CR>", opts)
 -- msic --
-keymap("n", "K", "5k", opts)
-keymap("n", "J", "5j", opts)
-keymap("n", "H", "7h", opts)
-keymap("n", "L", "7l", opts)
-keymap("v", "p", '"_dP', opts)
+-- keymap("n", "K", "5k", opts)
+-- keymap("n", "J", "5j", opts)
+-- keymap("n", "H", "7h", opts)
+-- keymap("n", "L", "7l", opts)
+-- keymap("v", "p", '"_dP', opts)

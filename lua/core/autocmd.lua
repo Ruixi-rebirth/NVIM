@@ -20,3 +20,5 @@ vim.cmd([[autocmd ColorScheme * highlight Normal guibg=NONE ctermbg=NONE]])
 -- 	[[autocmd BufWritePre *.go :silent! lua vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })]]
 -- )
 -- vim.cmd([[autocmd BufWritePre *.go :silent! lua vim.lsp.buf.format()]])
+
+vim.cmd([[autocmd FileType go nnoremap <buffer> <F5> :TermExec cmd="go run main.go" <CR>]])

@@ -80,9 +80,22 @@ return require("packer").startup(function(use)
 	use({ "hrsh7th/cmp-cmdline", after = "cmp-path" })
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/nvim-lsp-installer" })
+	use({ "glepnir/lspsaga.nvim", config = "require('plugins.configs.lspsaga')", branch = "main" })
+	--[ debug ]--
+	use({
+		"rcarriga/nvim-dap-ui",
+		requires = { "mfussenegger/nvim-dap" },
+		config = "require('plugins.configs.dapui')",
+	})
+	use({
+		"leoluz/nvim-dap-go",
+		ft = { "go" },
+		config = function()
+			require("dap-go").setup()
+		end,
+	})
 	--[ format code ]--
 	use({ "jose-elias-alvarez/null-ls.nvim" })
-	use({ "glepnir/lspsaga.nvim", config = "require('plugins.configs.lspsaga')", branch = "main" })
 	--[ A super powerful autopair plugin for Neovim that supports multiple characters. ]--
 	use({
 		"windwp/nvim-autopairs",

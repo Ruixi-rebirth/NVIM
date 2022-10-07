@@ -1,4 +1,5 @@
 require("bufferline").setup({
+	highlights = require("catppuccin.groups.integrations.bufferline").get(),
 	options = {
 		mode = "buffers", -- set to "tabs" to only show tabpages instead
 		numbers = "buffer_id",

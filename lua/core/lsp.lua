@@ -142,7 +142,7 @@ nvim_lsp.marksman.setup({
 	capabilities = capabilities,
 	settings = {
 		marksman = {
-			cmd = "~/.local/share/nvim/lsp_servers/marksman/marksman",
+			cmd = { "~/.local/share/nvim/lsp_servers/marksman/marksman", "server" },
 		},
 	},
 })

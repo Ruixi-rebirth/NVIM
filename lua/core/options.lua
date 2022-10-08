@@ -23,6 +23,8 @@ local options = {
 	scrolloff = 8,
 	fileencodings = "utf-8,gbk",
 	updatetime = 50, -- faster completion (4000ms default)
+	foldenable = false,
+	foldlevel = 99,
 }
 
 for k, v in pairs(options) do
